@@ -39,26 +39,26 @@ To do:
 To do:
 
 - [x] Brainstorm what database models I'll need:
-  - Users
-    - First name: string
-    - Last name: string
+  - User
+    - first name: string
+    - last name: string
     - email: string
     - username: string
     - password: string
-    - salt?: string
     - member: boolean (false by default)
     - admin: boolean (false by default)
-  - Messages
+  - Message
     - title: string
     - timestamp: Date
     - text: string
-  - Sessions
-- [ ] Set up my models
+    - user: ObjectId (references User)
+  - Sessions?
+- [x] Set up models
 - [ ] Set up a sign-up form
   - [ ] Create route
   - [ ] Build form
   - [ ] Set up GET and POST controllers
   - [ ] Validate and sanitize fields
   - [ ] Add a `confirmPassword` field to form and validate it using a custom validator (read about that [here](https://express-validator.github.io/docs/guides/customizing/))
-  - [ ] Secure the passwords w/ `bcrypt`
+  - [ ] Secure the passwords w/ [`bcrypt`](https://www.npmjs.com/package/bcryptjs)
   - [ ] Add some users to the DB
