@@ -54,10 +54,11 @@ To do:
     - user: ObjectId (references User)
   - Sessions?
 - [x] Set up models
+- [x] Set up sign-up and log-in routes and controllers
 - [ ] Set up a sign-up form
-  - [ ] Create route
   - [ ] Build form
-  - [ ] Set up GET and POST controllers
+  - [ ] Fill in GET controller
+  - [ ] Fill in POST controller
   - [ ] Validate and sanitize fields
   - [ ] Add a `confirmPassword` field to form and validate it using a custom validator (read about that [here](https://express-validator.github.io/docs/guides/customizing/))
   - [ ] Secure the passwords w/ [`bcrypt`](https://www.npmjs.com/package/bcryptjs)
