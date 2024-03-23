@@ -56,8 +56,8 @@ To do:
 - [x] Set up models
 - [x] Set up sign-up and log-in routes and controllers
 - [ ] Set up a sign-up form
-  - [ ] Build form
-  - [ ] Fill in GET controller
+  - [x] Build form
+  - [x] Fill in GET controller
   - [ ] Fill in POST controller
   - [ ] Validate and sanitize fields
   - [ ] Add a `confirmPassword` field to form and validate it using a custom validator (read about that [here](https://express-validator.github.io/docs/guides/customizing/))

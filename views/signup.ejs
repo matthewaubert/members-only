@@ -1,0 +1,70 @@
+<%- include('./partials/header') %>
+<h2 class="text-xl"><%= title %></h2>
+<form action="" method="POST">
+  <div>
+    <label for="firstName">First Name</label>
+    <input
+      type="text"
+      id="firstName"
+      name="firstName"
+      placeholder="e.g. Sam"
+      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      required
+      value=""
+    />
+  </div>
+  <div>
+    <label for="lastName">Last Name</label>
+    <input
+      type="text"
+      id="lastName"
+      name="lastName"
+      placeholder="e.g. Smith"
+      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      required
+      value=""
+    />
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="e.g. example@email.com"
+      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      required
+      value=""
+    />
+  </div>
+  <div>
+    <label for="username">Username</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      placeholder="e.g. samsmith"
+      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      required
+      value=""
+    />
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      required
+      value=""
+    />
+  </div>
+  <button
+    type="submit"
+    class="bg-gray-500 hover:bg-gray-600 text-white rounded px-3 py-3 flex flex-col gap-2"
+  >
+    Sign up
+  </button>
+</form>
+<%- include('./partials/footer') %>
