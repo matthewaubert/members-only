@@ -58,8 +58,8 @@ To do:
 - [ ] Set up a sign-up form
   - [x] Build form
   - [x] Fill in GET controller
-  - [ ] Fill in POST controller
+  - [x] Fill in POST controller
     - [x] Validate and sanitize fields
     - [x] Add a `confirmPassword` field to form and validate it using a custom validator (read about that [here](https://express-validator.github.io/docs/guides/customizing/))
-    - [ ] Secure the passwords w/ [`bcrypt`](https://www.npmjs.com/package/bcryptjs)
-    - [ ] Add some users to the DB
+    - [x] Secure the passwords w/ [`bcrypt`](https://www.npmjs.com/package/bcryptjs)
+    - [x] Add some users to the DB
