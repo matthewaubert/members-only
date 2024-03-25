@@ -4,10 +4,14 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const { decode } = require('he');
+const { findError } = require('./utils/util');
 
 const indexRouter = require('./routes/index');
 
 const app = express();
+app.locals.decode = decode;
+app.locals.findError = findError;
 
 // Set up mongoose connection
 const mongoose = require('mongoose');

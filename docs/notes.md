@@ -1,7 +1,6 @@
 # Members Only Notes
 
 ## Assignment
-
 > Ref: https://www.theodinproject.com/lessons/nodejs-members-only
 
 In this project you’ll be building an exclusive clubhouse where your members can write anonymous posts. Inside the clubhouse, members can see who the author of a post is, but outside they can only see the story and wonder who wrote it.
@@ -31,13 +30,11 @@ This will be a chance for you to use the authentication skills we learned in the
 ## 3/22/24
 
 To do:
-
 1. [Create a new Express app]("https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website")
 
 ## 3/23/24
 
 To do:
-
 - [x] Brainstorm what database models I'll need:
   - User
     - first name: string
@@ -55,7 +52,7 @@ To do:
   - Sessions?
 - [x] Set up models
 - [x] Set up sign-up and log-in routes and controllers
-- [ ] Set up a sign-up form
+- [x] Set up sign-up form
   - [x] Build form
   - [x] Fill in GET controller
   - [x] Fill in POST controller
@@ -63,3 +60,4 @@ To do:
     - [x] Add a `confirmPassword` field to form and validate it using a custom validator (read about that [here](https://express-validator.github.io/docs/guides/customizing/))
     - [x] Secure the passwords w/ [`bcrypt`](https://www.npmjs.com/package/bcryptjs)
     - [x] Add some users to the DB
+  - [x] Add error messages to sign-up page

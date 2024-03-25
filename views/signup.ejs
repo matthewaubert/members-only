@@ -1,5 +1,6 @@
 <%- include('./partials/header') %>
 <h2 class="text-xl"><%= title %></h2>
+
 <form action="" method="POST">
   <div>
     <label for="firstName">First Name</label>
@@ -10,9 +11,13 @@
       placeholder="e.g. Sam"
       class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
       required
-      value=""
+      value="<%= locals.user ? decode(user.firstName) : '' %>"
     />
+    <!-- prettier-ignore -->
+    <% const firstNameErr = locals.errors ? findError(errors, 'firstName') : null %>
+    <%- firstNameErr && include('./partials/error-msg', { msg: firstNameErr.msg }) %>
   </div>
+
   <div>
     <label for="lastName">Last Name</label>
     <input
@@ -22,9 +27,13 @@
       placeholder="e.g. Smith"
       class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
       required
-      value=""
+      value="<%= locals.user ? decode(user.lastName) : '' %>"
     />
+    <!-- prettier-ignore -->
+    <% const lastNameErr = locals.errors ? findError(errors, 'lastName') : null %>
+    <%- lastNameErr && include('./partials/error-msg', { msg: lastNameErr.msg }) %>
   </div>
+
   <div>
     <label for="email">Email</label>
     <input
@@ -34,9 +43,13 @@
       placeholder="e.g. example@email.com"
       class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
       required
-      value=""
+      value="<%= locals.user ? decode(user.email) : '' %>"
     />
+    <!-- prettier-ignore -->
+    <% const emailErr = locals.errors ? findError(errors, 'email') : null %>
+    <%- emailErr && include('./partials/error-msg', { msg: emailErr.msg }) %>
   </div>
+
   <div>
     <label for="password">Password</label>
     <input
@@ -45,9 +58,12 @@
       name="password"
       class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
       required
-      value=""
     />
+    <!-- prettier-ignore -->
+    <% const passwordErr = locals.errors ? findError(errors, 'password') : null %>
+    <%- passwordErr && include('./partials/error-msg', { msg: passwordErr.msg }) %>
   </div>
+
   <div>
     <label for="confirmPassword">Confirm Password</label>
     <input
@@ -56,9 +72,12 @@
       name="confirmPassword"
       class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
       required
-      value=""
     />
+    <!-- prettier-ignore -->
+    <% const confirmPasswordErr = locals.errors ? findError(errors, 'confirmPassword') : null %>
+    <%- confirmPasswordErr && include('./partials/error-msg', { msg: confirmPasswordErr.msg }) %>
   </div>
+
   <button
     type="submit"
     class="bg-gray-500 hover:bg-gray-600 text-white rounded px-3 py-3 flex flex-col gap-2"
