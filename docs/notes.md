@@ -61,3 +61,14 @@ To do:
     - [x] Secure the passwords w/ [`bcrypt`](https://www.npmjs.com/package/bcryptjs)
     - [x] Add some users to the DB
   - [x] Add error messages to sign-up page
+
+## 3/25/24
+
+To do:
+- [ ] Set up login page
+  - [x] Build form
+    - [x] Add error messages
+  - [x] Fill in GET controller
+  - [ ] Fill in POST controller
+    - [ ] Validate and sanitize fields
+- [ ] Use PassportJS to log user in
