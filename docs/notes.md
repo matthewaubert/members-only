@@ -65,10 +65,9 @@ To do:
 ## 3/25/24
 
 To do:
-- [ ] Set up login page
+- [x] Set up login page
   - [x] Build form
     - [x] Add error messages
   - [x] Fill in GET controller
-  - [ ] Fill in POST controller
-    - [ ] Validate and sanitize fields
-- [ ] Use PassportJS to log user in
+  - [x] Fill in POST controller
+- [x] Use PassportJS to log user in

@@ -2,7 +2,7 @@ const User = require('../models/user');
 const asyncHandler = require('express-async-handler');
 const { body, validationResult } = require('express-validator');
 const { encode } = require('he');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs'); // https://www.npmjs.com/package/bcryptjs
 
 exports.signupGet = asyncHandler(async (req, res, next) => {
   res.render('signup', { title: 'Sign Up' });
