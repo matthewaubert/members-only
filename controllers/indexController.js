@@ -1,5 +1,3 @@
-const asyncHandler = require('express-async-handler');
-
-module.exports = asyncHandler(async (req, res, next) => {
+module.exports = (req, res, next) => {
   res.render('index', { title: 'MembersOnly' });
-});
+};

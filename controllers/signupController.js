@@ -4,9 +4,9 @@ const { body, validationResult } = require('express-validator');
 const { encode } = require('he');
 const bcrypt = require('bcryptjs'); // https://www.npmjs.com/package/bcryptjs
 
-exports.signupGet = asyncHandler(async (req, res, next) => {
+exports.signupGet = (req, res, next) => {
   res.render('signup', { title: 'Sign Up' });
-});
+};
 
 exports.signupPost = [
   // validate and sanitize User fields
