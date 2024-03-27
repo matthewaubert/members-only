@@ -12,6 +12,7 @@
         <a href="/">MembersOnly</a>
       </h1>
       <nav class="flex gap-2">
+        <% if (!locals.currentUser) { %>
         <a
           href="/signup"
           class="bg-gray-500 hover:bg-gray-600 text-white hover:no-underline rounded px-3 py-2"
@@ -24,6 +25,14 @@
         >
           Log in
         </a>
+        <% } else { %>
+        <a
+          href="/logout"
+          class="bg-gray-500 hover:bg-gray-600 text-white hover:no-underline rounded px-3 py-2"
+        >
+          Log out
+        </a>
+        <% } %>
       </nav>
     </header>
     <main>

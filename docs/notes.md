@@ -71,3 +71,8 @@ To do:
   - [x] Fill in GET controller
   - [x] Fill in POST controller
 - [x] Use PassportJS to log user in
+
+# 3/27/24
+
+To do:
+- [x] Enable user logout
