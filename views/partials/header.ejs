@@ -25,12 +25,25 @@
         >
           Log in
         </a>
-        <% } else { %>
+        <% } else { if (!currentUser.member) { %>
+        <a
+          href="/become-member"
+          class="bg-gray-500 hover:bg-gray-600 text-white hover:no-underline rounded px-3 py-2"
+        >
+          Become a Member
+        </a>
+        <% } %>
+        <a
+          href="/new-message"
+          class="bg-gray-500 hover:bg-gray-600 text-white hover:no-underline rounded px-3 py-2"
+        >
+          New Message
+        </a>
         <a
           href="/logout"
           class="bg-gray-500 hover:bg-gray-600 text-white hover:no-underline rounded px-3 py-2"
         >
-          Log out
+          Log Out
         </a>
         <% } %>
       </nav>

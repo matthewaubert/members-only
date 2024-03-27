@@ -1,0 +1,41 @@
+<%- include('./partials/header') %>
+<h2 class="text-xl"><%= title %></h2>
+<p>
+  Hey <span><%= currentUser.firstName %></span>, what would you like to say?
+</p>
+
+<form action="" method="POST">
+  <div>
+    <label for="title">Title</label>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      placeholder="Title of your message"
+      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      required
+      value=""
+    />
+  </div>
+
+  <div>
+    <label for="text">Message</label>
+    <textarea
+      id="text"
+      name="text"
+      cols="30"
+      rows="6"
+      placeholder="Your message"
+      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      required
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="bg-gray-500 hover:bg-gray-600 text-white rounded px-3 py-3 flex flex-col gap-2"
+  >
+    Submit
+  </button>
+</form>
+<%- include('./partials/footer') %>

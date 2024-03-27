@@ -76,3 +76,8 @@ To do:
 
 To do:
 - [x] Enable user logout
+- [x] Add "Become a Member" page
+- [ ] Set up New Message page
+  - [x] Build form
+  - [x] Fill in GET controller
+  - [ ] Fill in POST controller

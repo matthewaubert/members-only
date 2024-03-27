@@ -1,0 +1,33 @@
+<%- include('./partials/header') %>
+<h2 class="text-xl"><%= title %></h2>
+<p>Want to join the club? Enter the secret passcode to become a member.</p>
+<p>
+  Hover around the page to find the
+  <span
+    class="font-semibold text-gray-500"
+    title="Tread on the living, they make not a mumble.&#10;Tread on the dead, they mutter and grumble.&#10;What are they?"
+  >
+    hint</span
+  >.
+</p>
+<form action="" method="POST">
+  <div>
+    <label for="passcode">Passcode</label>
+    <input
+      type="text"
+      id="passcode"
+      name="passcode"
+      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      required
+    />
+  </div>
+  <%- locals.error && include('./partials/error-msg', { msg: error }) %>
+  <button
+    type="submit"
+    class="bg-gray-500 hover:bg-gray-600 text-white rounded px-3 py-3 flex flex-col gap-2"
+  >
+    Submit
+  </button>
+</form>
+
+<%- include('./partials/footer') %>
