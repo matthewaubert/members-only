@@ -94,4 +94,4 @@ To do:
   - [x] Enable admin controls
 - [x] Rename Message controllers
 - [x] Check for messages before rendering them to index
-- [ ] Protect member- and admin-specific routes
+- [x] Protect member- and admin-specific routes

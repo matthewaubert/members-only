@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { isUser, isMember, isAdmin } = require('../utils/auth-middleware');
 
 // require controller modules
 const indexController = require('../controllers/index-controller');
@@ -21,20 +22,20 @@ router.post('/login', loginController.loginPost);
 
 router.get('/logout', loginController.logoutGet);
 
-router.get('/become-member', memberController.becomeMemberGet);
+router.get('/become-member', isUser, memberController.becomeMemberGet);
 
-router.post('/become-member', memberController.becomeMemberPost);
+router.post('/become-member', isUser, memberController.becomeMemberPost);
 
-router.get('/become-admin', memberController.becomeAdminGet);
+router.get('/become-admin', isMember, memberController.becomeAdminGet);
 
-router.post('/become-admin', memberController.becomeAdminPost);
+router.post('/become-admin', isMember, memberController.becomeAdminPost);
 
-router.get('/message/create', messageController.messageCreateGet);
+router.get('/message/create', isUser, messageController.messageCreateGet);
 
-router.post('/message/create', messageController.messageCreatePost);
+router.post('/message/create', isUser, messageController.messageCreatePost);
 
-router.get('/message/:id/delete', messageController.messageDeleteGet);
+router.get('/message/:id/delete', isAdmin, messageController.messageDeleteGet);
 
-router.post('/message/:id/delete', messageController.messageDeletePost);
+router.post('/message/:id/delete', isAdmin, messageController.messageDeletePost);
 
 module.exports = router;
