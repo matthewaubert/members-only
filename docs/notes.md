@@ -81,3 +81,9 @@ To do:
   - [x] Build form
   - [x] Fill in GET controller
   - [x] Fill in POST controller
+
+## 3/28/24
+
+To do:
+- [x] Display all messages on index page
+- [ ] Format the date

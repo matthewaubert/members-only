@@ -5,5 +5,27 @@
   clubhouse, members can see who the author of a post is, but outside they can
   only see the story and wonder who wrote it.
 </p>
-<!-- messages -->
+<div>
+  <% for (const message of messages) { %>
+  <div class="border rounded p-4 flex flex-col gap-1">
+    <div class="flex gap-2 items-baseline">
+      <h3 class="font-bold text-lg"><%= decode(message.title) %></h3>
+      <% if (locals.currentUser?.member) { %>
+      <p class="text-gray-400 text-sm">•</p>
+      <p class="italic text-gray-400 text-sm"><%= message.timestamp %></p>
+      <% } %>
+    </div>
+    <% if (locals.currentUser?.member) { %>
+    <p>by: <strong><%= decode(message.user.fullName) %></strong></p>
+    <% } %>
+    <p><%= decode(message.text) %></p>
+    <% if (!locals.currentUser?.member) { %>
+    <hr class="my-1" />
+    <p class="text-gray-400">
+      Become a member to see who wrote this message and when.
+    </p>
+    <% } %>
+  </div>
+  <% } %>
+</div>
 <%- include('./partials/footer') %>
