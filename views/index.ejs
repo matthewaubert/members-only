@@ -12,7 +12,9 @@
       <h3 class="font-bold text-lg"><%= decode(message.title) %></h3>
       <% if (locals.currentUser?.member) { %>
       <p class="text-gray-400 text-sm">•</p>
-      <p class="italic text-gray-400 text-sm"><%= formatDate(message.timestamp) %></p>
+      <p class="italic text-gray-400 text-sm">
+        <%= formatDate(message.timestamp) %>
+      </p>
       <% } %>
     </div>
     <% if (locals.currentUser?.member) { %>
@@ -24,6 +26,11 @@
     <p class="text-gray-400">
       Become a member to see who wrote this message and when.
     </p>
+    <% } else if (locals.currentUser?.admin) { %>
+    <!-- prettier-ignore -->
+    <%- locals.messageToDelete && message.id === messageToDelete.id
+      ? include('./partials/delete-form', { type: 'message', id: message.id})
+      : include('./partials/delete-button', { type: 'message', id: message.id }) %>
     <% } %>
   </div>
   <% } %>

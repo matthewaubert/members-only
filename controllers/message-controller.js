@@ -45,3 +45,26 @@ exports.newMessagePost = [
     }
   }),
 ];
+
+exports.deleteMessageGet = asyncHandler(async (req, res, next) => {
+  // get Message w/ `_id` that matches `req.params.id` and all Messages in parallel
+  const [messageToDelete, messages] = await Promise.all([
+    Message.findById(req.params.id).exec(),
+    Message.find().populate('user').sort({ timestamp: -1 }).exec(),
+  ]);
+
+  // if `messageToDelete` not found: redirect to index
+  if (!messageToDelete) res.redirect('/');
+
+  res.render('index', {
+    title: 'MembersOnly',
+    messageToDelete,
+    messages,
+  });
+});
+
+exports.deleteMessagePost = asyncHandler(async (req, res, next) => {
+  // delete message and redirect to index
+  await Message.findByIdAndDelete(req.body.messageid);
+  res.redirect('/');
+});

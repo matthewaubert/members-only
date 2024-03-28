@@ -9,13 +9,14 @@ const passport = require('passport');
 const MongoStore = require('connect-mongo'); // https://www.npmjs.com/package/connect-mongo
 
 const { decode } = require('he');
-const { findError } = require('./utils/util');
+const { findError, formatDate } = require('./utils/util');
 
 const indexRouter = require('./routes/index');
 
 const app = express();
 app.locals.decode = decode;
 app.locals.findError = findError;
+app.locals.formatDate = formatDate;
 
 // set up mongoose connection
 const mongoose = require('mongoose');

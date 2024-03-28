@@ -33,4 +33,8 @@ router.get('/new-message', messageController.newMessageGet);
 
 router.post('/new-message', messageController.newMessagePost);
 
+router.get('/message/:id/delete', messageController.deleteMessageGet);
+
+router.post('/message/:id/delete', messageController.deleteMessagePost);
+
 module.exports = router;
