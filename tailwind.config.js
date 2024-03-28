@@ -2,7 +2,12 @@
 module.exports = {
   content: ['./views/**/*.ejs'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: 'proxima-nova-condensed, sans-serif',
+        sans: 'proxima-nova, sans-serif',
+      },
+    },
   },
   plugins: [],
 };

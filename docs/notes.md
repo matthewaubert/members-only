@@ -95,3 +95,9 @@ To do:
 - [x] Rename Message controllers
 - [x] Check for messages before rendering them to index
 - [x] Protect member- and admin-specific routes
+- [x] Decide on welcome message for index page
+- [ ] Style pages
+- [ ] Make error page more user-friendly
+- [ ] Prep app for deployment
+- [ ] Write README
+- [ ] Deploy to production!
