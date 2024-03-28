@@ -72,12 +72,12 @@ To do:
   - [x] Fill in POST controller
 - [x] Use PassportJS to log user in
 
-# 3/27/24
+## 3/27/24
 
 To do:
 - [x] Enable user logout
 - [x] Add "Become a Member" page
-- [ ] Set up New Message page
+- [x] Set up New Message page
   - [x] Build form
   - [x] Fill in GET controller
-  - [ ] Fill in POST controller
+  - [x] Fill in POST controller

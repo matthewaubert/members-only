@@ -27,4 +27,6 @@ router.post('/become-member', memberController.becomeMemberPost);
 
 router.get('/new-message', messageController.newMessageGet);
 
+router.post('/new-message', messageController.newMessagePost);
+
 module.exports = router;

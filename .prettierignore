@@ -63,3 +63,4 @@ typings/
 # views
 views/partials/header.ejs
 views/partials/footer.ejs
+views/new-message.ejs
