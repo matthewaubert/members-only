@@ -93,5 +93,5 @@ To do:
   - [x] Add admin controls to delete messages
   - [x] Enable admin controls
 - [x] Rename Message controllers
-- [ ] Check for messages before rendering them to index
+- [x] Check for messages before rendering them to index
 - [ ] Protect member- and admin-specific routes
