@@ -87,3 +87,8 @@ To do:
 To do:
 - [x] Display all messages on index page
 - [x] Format dates for display
+- [ ] Build admin functionality
+  - [x] Add "Become an Admin" page and handle GET controller
+  - [x] Handle POST controller
+  - [ ] Add admin controls to delete messages
+  - [ ] Enable admin controls

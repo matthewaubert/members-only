@@ -25,6 +25,10 @@ router.get('/become-member', memberController.becomeMemberGet);
 
 router.post('/become-member', memberController.becomeMemberPost);
 
+router.get('/become-admin', memberController.becomeAdminGet);
+
+router.post('/become-admin', memberController.becomeAdminPost);
+
 router.get('/new-message', messageController.newMessageGet);
 
 router.post('/new-message', messageController.newMessagePost);
