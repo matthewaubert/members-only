@@ -92,5 +92,6 @@ To do:
   - [x] Handle POST controller
   - [x] Add admin controls to delete messages
   - [x] Enable admin controls
-- [ ] Rename Message controllers
+- [x] Rename Message controllers
 - [ ] Check for messages before rendering them to index
+- [ ] Protect member- and admin-specific routes

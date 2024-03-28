@@ -3,11 +3,11 @@ const asyncHandler = require('express-async-handler');
 const { body, validationResult } = require('express-validator');
 const { encode } = require('he');
 
-exports.newMessageGet = (req, res, next) => {
-  res.render('new-message', { title: 'New Message' });
+exports.messageCreateGet = (req, res, next) => {
+  res.render('message-create', { title: 'New Message' });
 };
 
-exports.newMessagePost = [
+exports.messageCreatePost = [
   // validate and sanitize fields
   body('title', 'Title must not be empty.')
     .trim()
@@ -33,7 +33,7 @@ exports.newMessagePost = [
 
     // if errors: render form again w/ sanitized values & error msgs
     if (!errors.isEmpty()) {
-      res.render('new-message', {
+      res.render('message-create', {
         title: 'New Message',
         message,
         errors: errors.array(),
@@ -46,7 +46,7 @@ exports.newMessagePost = [
   }),
 ];
 
-exports.deleteMessageGet = asyncHandler(async (req, res, next) => {
+exports.messageDeleteGet = asyncHandler(async (req, res, next) => {
   // get Message w/ `_id` that matches `req.params.id` and all Messages in parallel
   const [messageToDelete, messages] = await Promise.all([
     Message.findById(req.params.id).exec(),
@@ -63,7 +63,7 @@ exports.deleteMessageGet = asyncHandler(async (req, res, next) => {
   });
 });
 
-exports.deleteMessagePost = asyncHandler(async (req, res, next) => {
+exports.messageDeletePost = asyncHandler(async (req, res, next) => {
   // delete message and redirect to index
   await Message.findByIdAndDelete(req.body.messageid);
   res.redirect('/');

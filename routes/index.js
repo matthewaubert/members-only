@@ -29,12 +29,12 @@ router.get('/become-admin', memberController.becomeAdminGet);
 
 router.post('/become-admin', memberController.becomeAdminPost);
 
-router.get('/new-message', messageController.newMessageGet);
+router.get('/message/create', messageController.messageCreateGet);
 
-router.post('/new-message', messageController.newMessagePost);
+router.post('/message/create', messageController.messageCreatePost);
 
-router.get('/message/:id/delete', messageController.deleteMessageGet);
+router.get('/message/:id/delete', messageController.messageDeleteGet);
 
-router.post('/message/:id/delete', messageController.deleteMessagePost);
+router.post('/message/:id/delete', messageController.messageDeletePost);
 
 module.exports = router;
