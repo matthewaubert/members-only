@@ -1,5 +1,6 @@
 const Message = require('../models/message');
 const asyncHandler = require('express-async-handler');
+const { formatDate } = require('../utils/util');
 
 module.exports = asyncHandler(async (req, res, next) => {
   // get all Messages
@@ -11,5 +12,6 @@ module.exports = asyncHandler(async (req, res, next) => {
   res.render('index', {
     title: 'MembersOnly',
     messages,
+    formatDate,
   });
 });

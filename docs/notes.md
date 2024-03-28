@@ -86,4 +86,4 @@ To do:
 
 To do:
 - [x] Display all messages on index page
-- [ ] Format the date
+- [x] Format dates for display
