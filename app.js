@@ -23,8 +23,10 @@ app.locals.formatDate = formatDate;
 // set up rate limiter: max of 20 requests per minute
 const { rateLimit } = require('express-rate-limit'); // https://express-rate-limit.mintlify.app/quickstart/usage
 const limiter = rateLimit({
-  windowMs: 1 * 60 * 1000, // 1 min
-  max: 20,
+	windowMs: 5 * 60 * 1000, // 5 minutes
+	max: 100, // Limit each IP to 100 requests per `window`
+	standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+	legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 });
 app.use(limiter); // apply rate limiter to all requests
 

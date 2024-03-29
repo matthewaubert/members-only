@@ -111,6 +111,6 @@ To do:
   - [x] Compile frontend JS w/ Webpack and Babel
   - [x] Reinstall dependencies and re-test
   - [x] Clean up code, remove console.logs
-  - [ ] Fix express-rate-limiter settings
+  - [x] Fix express-rate-limiter settings
 - [ ] Write README
 - [ ] Deploy to production!
