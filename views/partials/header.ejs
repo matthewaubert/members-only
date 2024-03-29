@@ -8,52 +8,23 @@
 
     <link rel="stylesheet" href="https://use.typekit.net/crz6rgk.css">
   </head>
-  <body class="mx-auto px-6 py-4">
+  <body class="mx-auto px-6 py-4 max-w-screen-lg">
     <header class="flex gap-4 justify-between items-center mb-6">
       <h1>
         <a href="/"><span class="text-indigo-600">Members</span>Only</a>
       </h1>
       <nav class="flex gap-2">
         <% if (!locals.currentUser) { %>
-        <a
-          href="/signup"
-          class="bg-indigo-500 hover:bg-indigo-600 text-white hover:no-underline rounded px-3 py-2"
-        >
-          Sign up
-        </a>
-        <a
-          href="/login"
-          class="bg-indigo-500 hover:bg-indigo-600 text-white hover:no-underline rounded px-3 py-2"
-        >
-          Log in
-        </a>
+        <a href="/signup" class="link-btn">Sign up</a>
+        <a href="/login" class="link-btn">Log in</a>
+
         <% } else { if (!currentUser.member) { %>
-        <a
-          href="/become-member"
-          class="bg-indigo-500 hover:bg-indigo-600 text-white hover:no-underline rounded px-3 py-2"
-        >
-          Become a Member
-        </a>
+        <a href="/become-member" class="link-btn">Become a Member</a>
         <% } else if (!currentUser.admin) { %>
-        <a
-          href="/become-admin"
-          class="bg-indigo-500 hover:bg-indigo-600 text-white hover:no-underline rounded px-3 py-2"
-        >
-          Become an Admin
-        </a>
+        <a href="/become-admin" class="link-btn">Become an Admin</a>
         <% } %>
-        <a
-          href="/message/create"
-          class="bg-indigo-500 hover:bg-indigo-600 text-white hover:no-underline rounded px-3 py-2"
-        >
-          New Message
-        </a>
-        <a
-          href="/logout"
-          class="bg-indigo-500 hover:bg-indigo-600 text-white hover:no-underline rounded px-3 py-2"
-        >
-          Log Out
-        </a>
+        <a href="/message/create" class="link-btn">New Message</a>
+        <a href="/logout" class="link-btn">Log Out</a>
         <% } %>
       </nav>
     </header>

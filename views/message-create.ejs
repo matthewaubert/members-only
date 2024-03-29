@@ -1,19 +1,20 @@
 <%- include('./partials/header') %>
 <% if (locals.currentUser) { %>
-<h2 class="text-xl"><%= title %></h2>
+<h2><%= title %></h2>
 <p>
-  Hi <span><%= currentUser.firstName %></span>, what would you like to say?
+  Hi <span class="text-accent"><%= currentUser.firstName %></span>,
+  what would you like to say?
 </p>
 
-<form action="" method="POST">
-  <div>
+<form action="" method="POST" class="form">
+  <div class="input-container">
     <label for="title">Title</label>
     <input
       type="text"
       id="title"
       name="title"
       placeholder="Title of your message"
-      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      class="input"
       required
       value="<%= locals.message ? decode(message.title) : '' %>"
     />
@@ -21,7 +22,7 @@
     <%- titleErr && include('./partials/error-msg', { msg: titleErr.msg }) %>
   </div>
 
-  <div>
+  <div class="input-container">
     <label for="text">Message</label>
     <textarea
       id="text"
@@ -29,17 +30,14 @@
       cols="30"
       rows="6"
       placeholder="Your message"
-      class="border border-gray-400 rounded px-2 py-1 flex flex-col gap-2"
+      class="input"
       required
     ><%= locals.message ? decode(message.text) : '' %></textarea>
     <% const textErr = locals.errors ? findError(errors, 'text') : null %>
     <%- textErr && include('./partials/error-msg', { msg: textErr.msg }) %>
   </div>
 
-  <button
-    type="submit"
-    class="bg-gray-500 hover:bg-gray-600 text-white rounded px-3 py-3 flex flex-col gap-2"
-  >
+  <button type="submit" class="form-btn">
     Submit
   </button>
 </form>

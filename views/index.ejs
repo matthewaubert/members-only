@@ -1,36 +1,39 @@
 <%- include('./partials/header') %>
 <div class="flex flex-col gap-1">
-  <h2 class="font-display font-bold text-7xl">
-    Welcome to <span class="text-indigo-600">Members</span>Only
+  <h2 class="text-7xl">
+    Welcome to <span class="text-accent">Members</span>Only
   </h2>
   <p class="font-medium text-2xl">
     The exclusive clubhouse where
-    <span class="font-bold text-indigo-600">members</span> can write anonymous
-    posts
+    <span class="text-accent">members</span> can write anonymous posts
   </p>
 </div>
 <ul class="list-disc ml-6">
   <li>
-    From the outside, people can only see messages and wonder who wrote them.
-  </li>
-  <li>From the inside, people can write new messages.</li>
-  <li>
-    Only <span class="font-medium text-indigo-600">members</span> of the
-    clubhouse can see who the author of a messages is and when it was written.
+    From the outside, <span class="text-accent">anyone</span> can only see
+    messages and wonder who wrote them.
   </li>
   <li>
-    Only trusted <span class="font-medium text-indigo-600">admins</span> can
-    delete messages to moderate the page.
+    From the inside, <span class="text-accent">anyone</span> can write new
+    messages.
+  </li>
+  <li>
+    Only <span class="text-accent">members</span> of the clubhouse can see who
+    the author of a messages is and when it was written.
+  </li>
+  <li>
+    Only trusted <span class="text-accent">admins</span> can delete messages to
+    moderate the page.
   </li>
 </ul>
 
 <div class="flex flex-col gap-6">
-  <h3 class="font-display font-bold text-4xl -mb-3">Messages</h3>
+  <h3 class="font-display font-bold text-3xl -mb-3">Messages</h3>
 
   <% if (locals.messages.length) { for (const message of messages) { %>
-  <div class="border rounded py-4 px-5 flex flex-col gap-1 shadow-md">
+  <div class="border rounded py-4 px-5 flex flex-col gap-2 shadow-md">
     <div class="flex gap-2 items-baseline">
-      <h3 class="font-bold text-xl"><%= decode(message.title) %></h3>
+      <h4 class="font-bold text-xl"><%= decode(message.title) %></h4>
       <% if (locals.currentUser?.member) { %>
       <p class="text-gray-400 text-sm">•</p>
       <p class="italic text-gray-400 text-sm">
@@ -40,7 +43,9 @@
     </div>
 
     <% if (locals.currentUser?.member) { %>
-    <p>by: <strong><%= decode(message.user.fullName) %></strong></p>
+    <p class="text-base">
+      by: <span class="text-accent"><%= decode(message.user.fullName) %></span>
+    </p>
     <% } %>
     <p><%= decode(message.text) %></p>
 
@@ -49,7 +54,7 @@
     <p class="text-gray-400">
       Become a member to see who wrote this message and when.
     </p>
-    
+
     <% } else if (locals.currentUser?.admin) { %>
     <hr class="invisible" />
     <!-- prettier-ignore -->

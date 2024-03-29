@@ -96,7 +96,7 @@ To do:
 - [x] Check for messages before rendering them to index
 - [x] Protect member- and admin-specific routes
 - [x] Decide on welcome message for index page
-- [ ] Style pages
+- [x] Style pages
 - [ ] Make error page more user-friendly
 - [ ] Prep app for deployment
 - [ ] Write README
