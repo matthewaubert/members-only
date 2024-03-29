@@ -34,8 +34,6 @@ router.get('/message/create', isUser, messageController.messageCreateGet);
 
 router.post('/message/create', isUser, messageController.messageCreatePost);
 
-router.get('/message/:id/delete', isAdmin, messageController.messageDeleteGet);
-
 router.post('/message/:id/delete', isAdmin, messageController.messageDeletePost);
 
 module.exports = router;

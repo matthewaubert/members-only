@@ -98,7 +98,8 @@ To do:
 - [x] Decide on welcome message for index page
 - [x] Style pages
 - [x] Make hamburger menu
-- [ ] Fix how I handle protected routes
+- [x] Refactor how I confirm message deletion
+- [ ] Refactor how I handle protected routes (redirect instead)
 - [ ] Make error page more user-friendly
 - [ ] Prep app for deployment
 - [ ] Write README

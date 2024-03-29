@@ -1,4 +1,4 @@
-<form action="" method="POST">
+<form action="/message/:id/delete" method="POST">
   <div class="form-group">
     <input
       type="hidden"
@@ -11,6 +11,7 @@
   <button
     type="submit"
     class="bg-red-500 hover:bg-red-600 text-white hover:no-underline rounded px-3 py-2 w-fit flex items-center gap-2"
+    onclick="<%= `return confirm('Are you sure you want to delete this ${type}?')` %>"
   >
     <!-- prettier-ignore -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-white w-6">
@@ -18,5 +19,4 @@
     </svg>
     Delete <%= type %>
   </button>
-  <p class="text-red-600">Are you sure you want to delete this <%= type %>?</p>
 </form>

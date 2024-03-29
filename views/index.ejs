@@ -62,10 +62,7 @@
 
     <% } else if (locals.currentUser?.admin) { %>
     <hr class="invisible" />
-    <!-- prettier-ignore -->
-    <%- locals.messageToDelete && message.id === messageToDelete.id
-      ? include('./partials/delete-form', { type: 'message', id: message.id})
-      : include('./partials/delete-button', { type: 'message', id: message.id }) %>
+    <%- include('./partials/delete-form', { type: 'message', id: message.id}) %>
     <% } %>
   </div>
 
