@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="/javascripts/menu.js" defer></script>
 
     <link rel="stylesheet" href="https://use.typekit.net/crz6rgk.css">
   </head>
@@ -13,20 +14,31 @@
       <h1>
         <a href="/"><span class="text-indigo-600">Members</span>Only</a>
       </h1>
-      <nav class="flex gap-3">
-        <% if (!locals.currentUser) { %>
-        <a href="/signup" class="link-btn">Sign up</a>
-        <a href="/login" class="link-btn">Log in</a>
-
-        <% } else { if (!currentUser.member) { %>
-        <a href="/become-member" class="link-btn">Become a Member</a>
-        <% } else if (!currentUser.admin) { %>
-        <a href="/become-admin" class="link-btn">Become an Admin</a>
-        <% } %>
-        <a href="/message/create" class="link-btn">New Message</a>
-        <a href="/logout" class="link-btn">Log Out</a>
-        <% } %>
-      </nav>
+      <div class="nav-container relative">
+        <button class="menu-btn grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="fill-gray-800 w-10 pointer-events-none"
+          >
+            <title>menu</title>
+            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" class="" />
+          </svg>
+        </button>
+        <nav class="flex gap-3 menu hidden">
+          <% if (!locals.currentUser) { %>
+          <a href="/signup" class="link-btn">Sign up</a>
+          <a href="/login" class="link-btn">Log in</a>
+          <% } else { if (!currentUser.member) { %>
+          <a href="/become-member" class="link-btn">Become a Member</a>
+          <% } else if (!currentUser.admin) { %>
+          <a href="/become-admin" class="link-btn">Become an Admin</a>
+          <% } %>
+          <a href="/message/create" class="link-btn">New Message</a>
+          <a href="/logout" class="link-btn">Log Out</a>
+          <% } %>
+        </nav>
+      </div>
     </header>
     <main class="flex flex-col gap-6">
       <!-- block content -->

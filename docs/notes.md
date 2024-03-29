@@ -97,6 +97,7 @@ To do:
 - [x] Protect member- and admin-specific routes
 - [x] Decide on welcome message for index page
 - [x] Style pages
+- [x] Make hamburger menu
 - [ ] Make error page more user-friendly
 - [ ] Prep app for deployment
 - [ ] Write README

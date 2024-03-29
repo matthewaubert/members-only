@@ -27,6 +27,21 @@ p, li, label, input, textarea {
   @apply sm:text-lg;
 }
 
+.menu {
+  position: absolute;
+  right: 0;
+  @apply p-3;
+  @apply shadow-lg;
+  @apply bg-white;
+  @apply border;
+  @apply rounded;
+  @apply flex-col;
+}
+
+.hidden {
+  display: none;
+}
+
 .text-accent {
   @apply font-bold;
   @apply text-indigo-600;
@@ -67,8 +82,10 @@ p, li, label, input, textarea {
   @apply bg-indigo-500;
   @apply hover:bg-indigo-600;
   @apply text-white;
+  @apply text-center;
   @apply hover:no-underline;
   @apply rounded;
   @apply px-3;
   @apply py-2;
+  @apply min-w-max;
 }
