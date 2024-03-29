@@ -574,6 +574,10 @@ video {
   margin-bottom: 1.75rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -647,6 +651,10 @@ video {
   gap: 1.5rem;
 }
 
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -710,6 +718,10 @@ video {
   padding-top: 1.25rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .-indent-4 {
   text-indent: -1rem;
 }
@@ -730,6 +742,11 @@ video {
 
 .text-6xl {
   font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-9xl {
+  font-size: 8rem;
   line-height: 1;
 }
 

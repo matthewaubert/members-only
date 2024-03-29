@@ -97,10 +97,18 @@ To do:
 - [x] Protect member- and admin-specific routes
 - [x] Decide on welcome message for index page
 - [x] Style pages
+
+## 3/29/24
+
 - [x] Make hamburger menu
 - [x] Refactor how I confirm message deletion
 - [x] Refactor how I handle protected routes (redirect instead)
-- [ ] Make error page more user-friendly
+- [x] Make error page more user-friendly
 - [ ] Prep app for deployment
+  - [ ] Clean up code, remove console.logs
+  - [ ] Create production database
+  - [ ] Use compression, Helmet, rate limit
+  - [ ] Set Node version
+  - [ ] Get dependencies and re-test
 - [ ] Write README
 - [ ] Deploy to production!

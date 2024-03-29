@@ -1,3 +1,12 @@
-<h1><%= message %></h1>
-<h2><%= locals.error?.status && error.status %></h2>
-<pre><%= locals.error?.stack && error.stack %></pre>
+<%- include('./partials/header') %>
+<div class="flex flex-col text-center gap-3 mx-auto mt-8">
+  <h2 class="text-9xl text-accent"><%= error.status %></h2>
+  <h3 class="text-6xl">
+    <%= development ? error.message : 'Page not found.' %>
+  </h3>
+</div>
+<% if (development) { %>
+<div class="overflow-x-scroll">
+  <pre><%= error.stack %></pre>
+</div>
+<% } %> <%- include('./partials/footer') %>
