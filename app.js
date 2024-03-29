@@ -8,12 +8,12 @@ const session = require('express-session'); // https://github.com/expressjs/sess
 const passport = require('passport');
 const MongoStore = require('connect-mongo'); // https://www.npmjs.com/package/connect-mongo
 
-const { decode } = require('he');
+const { decode } = require('he'); // https://www.npmjs.com/package/he
 const { findError, formatDate } = require('./utils/util');
 
 const indexRouter = require('./routes/index');
 const compression = require('compression');
-const helmet = require('helmet');
+const helmet = require('helmet'); // https://helmetjs.github.io/
 
 const app = express();
 app.locals.decode = decode;
@@ -77,7 +77,6 @@ app.use((req, res, next) => {
   req.session.messages = [];
 
   res.locals.currentUser = req.user;
-  console.log('currentUser', res.locals.currentUser);
   next();
 });
 

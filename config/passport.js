@@ -14,7 +14,6 @@ const customFields = {
 async function verify(email, password, done) {
   try {
     const user = await User.findOne({ email });
-    // console.log(user);
     const match = user ? await bcrypt.compare(password, user.password) : false;
 
     const doneArgs = match

@@ -24,7 +24,6 @@
       required
     />
     <!-- prettier-ignore -->
-    <% console.log(locals.messages) %>
     <%- locals.hasMessages ? include('./partials/error-msg', { msg: messages[0] }) : '' %>
   </div>
 

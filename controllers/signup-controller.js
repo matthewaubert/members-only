@@ -53,8 +53,6 @@ exports.signupPost = [
         password: hashedPassword,
       });
 
-      console.log('user:', user);
-
       // if errors: render form again w/ sanitized values & error msgs
       if (!errors.isEmpty()) {
         res.render('signup', {

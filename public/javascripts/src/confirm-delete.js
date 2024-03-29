@@ -9,7 +9,6 @@ const confirmDelete = () =>
 document.addEventListener('DOMContentLoaded', () => {
   const deleteBtns = document.querySelectorAll('.delete-btn');
   if (deleteBtns.length) {
-    console.log(deleteBtns);
     deleteBtns.forEach((btn) => {
       btn.addEventListener('click', (e) => {
         // Prevent form submission if confirmation is canceled

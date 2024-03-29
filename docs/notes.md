@@ -109,7 +109,8 @@ To do:
   - [x] Use compression, Helmet, rate limit
   - [x] Set Node version
   - [x] Compile frontend JS w/ Webpack and Babel
-  - [ ] Reinstall dependencies and re-test
-  - [ ] Clean up code, remove console.logs
+  - [x] Reinstall dependencies and re-test
+  - [x] Clean up code, remove console.logs
+  - [ ] Fix express-rate-limiter settings
 - [ ] Write README
 - [ ] Deploy to production!

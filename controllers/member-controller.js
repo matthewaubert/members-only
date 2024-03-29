@@ -6,9 +6,6 @@ exports.becomeMemberGet = (req, res, next) => {
 };
 
 exports.becomeMemberPost = asyncHandler(async (req, res, next) => {
-  // console.log('user', req.user);
-  console.log('passcode:', req.body.passcode);
-
   // if user entered correct member passcode:
   if (req.body.passcode === process.env.MEMBER_PASS) {
     // change user.member to true

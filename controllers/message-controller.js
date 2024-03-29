@@ -29,8 +29,6 @@ exports.messageCreatePost = [
       user: req.user.id,
     });
 
-    console.log('message:', message);
-
     // if errors: render form again w/ sanitized values & error msgs
     if (!errors.isEmpty()) {
       res.render('message-create', {
