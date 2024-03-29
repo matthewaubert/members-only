@@ -91,3 +91,17 @@ p, li, label, input, textarea {
   @apply py-2;
   @apply min-w-max;
 }
+
+.delete-btn {
+  @apply bg-red-500;
+  @apply hover:bg-red-600;
+  @apply text-white;
+  @apply hover:no-underline;
+  @apply rounded;
+  @apply px-3;
+  @apply py-2;
+  @apply w-fit;
+  @apply flex;
+  @apply items-center;
+  @apply gap-2;
+}

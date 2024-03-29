@@ -15,8 +15,8 @@
       required
       autocomplete="off"
     />
+    <%- locals.error && include('./partials/error-msg', { msg: error }) %>
   </div>
-  <%- locals.error && include('./partials/error-msg', { msg: error }) %>
   <button type="submit" class="form-btn">Submit</button>
 </form>
 
