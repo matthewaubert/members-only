@@ -112,5 +112,5 @@ To do:
   - [x] Reinstall dependencies and re-test
   - [x] Clean up code, remove console.logs
   - [x] Fix express-rate-limiter settings
+- [x] Deploy to production!
 - [ ] Write README
-- [ ] Deploy to production!

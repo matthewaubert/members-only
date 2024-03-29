@@ -16,6 +16,7 @@ const compression = require('compression');
 const helmet = require('helmet'); // https://helmetjs.github.io/
 
 const app = express();
+app.set('trust proxy', 3);
 app.locals.decode = decode;
 app.locals.findError = findError;
 app.locals.formatDate = formatDate;
