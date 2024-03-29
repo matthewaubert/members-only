@@ -1,21 +1,17 @@
-function showErrorPage(res, message) {
-  res.status(401).render('error', { message });
-}
+exports.isNotUser = (req, res, next) => {
+  !req.isAuthenticated() ? next() : res.redirect('/');
+};
 
 exports.isUser = (req, res, next) => {
-  req.isAuthenticated()
-    ? next()
-    : showErrorPage(res, 'You must be a user to view this page');
+  req.isAuthenticated() ? next() : res.redirect('/');
 };
 
 exports.isMember = (req, res, next) => {
-  req.isAuthenticated() && req.user.member
-    ? next()
-    : showErrorPage(res, 'You must be a member to view this page');
+  req.isAuthenticated() && req.user.member ? next() : res.redirect('/');
 };
 
 exports.isAdmin = (req, res, next) => {
   req.isAuthenticated() && req.user.member && req.user.admin
     ? next()
-    : showErrorPage(res, 'You must be an admin to view this page');
+    : res.redirect('/');
 };

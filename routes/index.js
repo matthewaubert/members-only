@@ -1,6 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { isUser, isMember, isAdmin } = require('../utils/auth-middleware');
+const {
+  isNotUser,
+  isUser,
+  isMember,
+  isAdmin,
+} = require('../utils/auth-middleware');
 
 // require controller modules
 const indexController = require('../controllers/index-controller');
@@ -12,13 +17,13 @@ const messageController = require('../controllers/message-controller');
 /* GET home page. */
 router.get('/', indexController);
 
-router.get('/signup', signupController.signupGet);
+router.get('/signup', isNotUser, signupController.signupGet);
 
-router.post('/signup', signupController.signupPost);
+router.post('/signup', isNotUser, signupController.signupPost);
 
-router.get('/login', loginController.loginGet);
+router.get('/login', isNotUser, loginController.loginGet);
 
-router.post('/login', loginController.loginPost);
+router.post('/login', isNotUser, loginController.loginPost);
 
 router.get('/logout', loginController.logoutGet);
 
@@ -34,6 +39,7 @@ router.get('/message/create', isUser, messageController.messageCreateGet);
 
 router.post('/message/create', isUser, messageController.messageCreatePost);
 
+// prettier-ignore
 router.post('/message/:id/delete', isAdmin, messageController.messageDeletePost);
 
 module.exports = router;

@@ -99,7 +99,7 @@ To do:
 - [x] Style pages
 - [x] Make hamburger menu
 - [x] Refactor how I confirm message deletion
-- [ ] Refactor how I handle protected routes (redirect instead)
+- [x] Refactor how I handle protected routes (redirect instead)
 - [ ] Make error page more user-friendly
 - [ ] Prep app for deployment
 - [ ] Write README
