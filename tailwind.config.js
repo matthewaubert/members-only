@@ -13,7 +13,6 @@ module.exports = {
       md: '768px', // default: 768px
       lg: '900px', // default: 1024px
       xl: '1280px', // default: 1280px
-      '2xl': '1536px', // default: 1536px
     },
   },
   plugins: [],

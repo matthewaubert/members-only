@@ -98,6 +98,7 @@ To do:
 - [x] Decide on welcome message for index page
 - [x] Style pages
 - [x] Make hamburger menu
+- [ ] Fix how I handle protected routes
 - [ ] Make error page more user-friendly
 - [ ] Prep app for deployment
 - [ ] Write README

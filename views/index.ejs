@@ -34,7 +34,9 @@
   <h3 class="font-display font-bold text-3xl -mb-3">Messages</h3>
 
   <% if (locals.messages.length) { for (const message of messages) { %>
-  <div class="border rounded py-4 px-5 flex flex-col gap-2 shadow-md">
+  <div
+    class="border border-gray-300 rounded py-4 px-5 flex flex-col gap-2 shadow-md"
+  >
     <div class="flex gap-2 items-baseline">
       <h4 class="font-bold text-xl"><%= decode(message.title) %></h4>
       <% if (locals.currentUser?.member) { %>
@@ -53,7 +55,7 @@
     <p><%= decode(message.text) %></p>
 
     <% if (!locals.currentUser?.member) { %>
-    <hr class="my-2" />
+    <hr class="border-gray-300 my-2" />
     <p class="text-gray-400">
       Become a member to see who wrote this message and when.
     </p>
