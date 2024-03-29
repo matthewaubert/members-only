@@ -105,10 +105,11 @@ To do:
 - [x] Refactor how I handle protected routes (redirect instead)
 - [x] Make error page more user-friendly
 - [ ] Prep app for deployment
-  - [ ] Clean up code, remove console.logs
   - [x] Create production database
   - [x] Use compression, Helmet, rate limit
   - [x] Set Node version
+  - [x] Compile frontend JS w/ Webpack and Babel
   - [ ] Get dependencies and re-test
+  - [ ] Clean up code, remove console.logs
 - [ ] Write README
 - [ ] Deploy to production!
