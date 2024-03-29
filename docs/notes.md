@@ -106,9 +106,9 @@ To do:
 - [x] Make error page more user-friendly
 - [ ] Prep app for deployment
   - [ ] Clean up code, remove console.logs
-  - [ ] Create production database
-  - [ ] Use compression, Helmet, rate limit
-  - [ ] Set Node version
+  - [x] Create production database
+  - [x] Use compression, Helmet, rate limit
+  - [x] Set Node version
   - [ ] Get dependencies and re-test
 - [ ] Write README
 - [ ] Deploy to production!

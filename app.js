@@ -12,16 +12,28 @@ const { decode } = require('he');
 const { findError, formatDate } = require('./utils/util');
 
 const indexRouter = require('./routes/index');
+const compression = require('compression');
+const helmet = require('helmet');
 
 const app = express();
 app.locals.decode = decode;
 app.locals.findError = findError;
 app.locals.formatDate = formatDate;
 
+// set up rate limiter: max of 20 requests per minute
+const { rateLimit } = require('express-rate-limit'); // https://express-rate-limit.mintlify.app/quickstart/usage
+const limiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 min
+  max: 20,
+});
+app.use(limiter); // apply rate limiter to all requests
+
+app.use(helmet()); // add helmet to middleware chain
+
 // set up mongoose connection
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
-const mongoDB = process.env.MONGODB_URI_DEV;
+const mongoDB = process.env.MONGODB_URI_PROD || process.env.MONGODB_URI_DEV;
 
 main().catch((err) => console.log(err));
 async function main() {
@@ -36,6 +48,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(compression()); // compress all routes
+
 app.use(express.static(path.join(__dirname, 'public')));
 // set up session
 app.use(
