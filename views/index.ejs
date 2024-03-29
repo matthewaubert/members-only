@@ -37,10 +37,11 @@
   <div
     class="border border-gray-300 rounded py-4 px-5 flex flex-col gap-2 shadow-md"
   >
-    <div class="flex gap-2 <%= message.title.length < 25 ? 'items-baseline' : 'items-center' %>">
-      <h4 class="font-bold text-xl"><%= decode(message.title) %></h4>
+    <div class="flex flex-wrap gap-x-3 gap-y-1 items-baseline">
+      <h4 class="font-bold text-lg sm:text-xl leading-snug">
+        <%= decode(message.title) %>
+      </h4>
       <% if (locals.currentUser?.member) { %>
-      <p class="text-gray-400 text-sm">•</p>
       <p class="italic text-gray-400 text-sm">
         <%= formatDate(message.timestamp) %>
       </p>

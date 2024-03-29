@@ -109,7 +109,7 @@ To do:
   - [x] Use compression, Helmet, rate limit
   - [x] Set Node version
   - [x] Compile frontend JS w/ Webpack and Babel
-  - [ ] Get dependencies and re-test
+  - [ ] Reinstall dependencies and re-test
   - [ ] Clean up code, remove console.logs
 - [ ] Write README
 - [ ] Deploy to production!
