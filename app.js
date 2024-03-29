@@ -61,10 +61,11 @@ app.use(
     saveUninitialized: false, // don't create session until something stored
     // create session store
     store: MongoStore.create({
-      client: mongoose.connection.getClient(),
+      mongoUrl: process.env.MONGODB_URI_PROD || process.env.MONGODB_URI_DEV, // MongoDB connection URI
+      client: mongoose.connection, // Use mongoose connection directly
       stringify: false, // do not serialize & deserialize sessions w/ `JSON.stringify` & `JSON.parse`
       autoRemove: 'interval', // behavior for removing expired sessions
-      autoRemoveInterval: 1, // in minutes
+      autoRemoveInterval: 60, // remove expired sessions every 60 minutes
     }),
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 1 day (ms * secs * mins * hrs)
   }),
