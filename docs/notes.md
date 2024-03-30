@@ -120,5 +120,6 @@ To do:
 - [x] Fix date issue
 - [x] Refactor client-side script for better module efficiency
 - [x] Fix Safari nav display
+- [x] Add favicon
 - [ ] Add Webpack and Babel to README
 - [ ] Record video and add to README
