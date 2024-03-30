@@ -5,8 +5,8 @@
 const confirmDelete = () =>
   confirm('Are you sure you want to delete this message?');
 
-// attach event listener to message delete form submit buttons
-document.addEventListener('DOMContentLoaded', () => {
+// attach event listener to message delete form submit buttons to confirm deletion
+export default function addConfirmDelete() {
   const deleteBtns = document.querySelectorAll('.delete-btn');
   if (deleteBtns.length) {
     deleteBtns.forEach((btn) => {
@@ -16,4 +16,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-});
+}

@@ -1,9 +1,8 @@
 import { formatDate } from '../../../utils/util';
 
-document.addEventListener('DOMContentLoaded', convertTimezone);
-
-// convert timezone from server to client for correct display of message times
-function convertTimezone() {
+// get message timestamps from data attribute,
+// convert to client timezone, format, and set as innerText
+export default function convertTimezone() {
   const timestamps = document.querySelectorAll('.timestamp');
 
   if (timestamps.length) {
