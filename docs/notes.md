@@ -119,6 +119,6 @@ To do:
 
 - [x] Fix date issue
 - [x] Refactor client-side script for better module efficiency
-- [ ] Fix Safari nav display
+- [x] Fix Safari nav display
 - [ ] Add Webpack and Babel to README
 - [ ] Record video and add to README

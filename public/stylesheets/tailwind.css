@@ -28,8 +28,8 @@ p, li, label, input, textarea {
 }
 
 .menu {
-  position: absolute;
-  right: 0;
+  @apply absolute;
+  @apply right-6;
   @apply p-3;
   @apply shadow-lg;
   @apply bg-white;
