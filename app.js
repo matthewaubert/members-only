@@ -9,7 +9,7 @@ const passport = require('passport');
 const MongoStore = require('connect-mongo'); // https://www.npmjs.com/package/connect-mongo
 
 const { decode } = require('he'); // https://www.npmjs.com/package/he
-const { findError, formatDate } = require('./utils/util');
+const { findError } = require('./utils/util');
 
 const indexRouter = require('./routes/index');
 const compression = require('compression');
@@ -19,7 +19,6 @@ const app = express();
 app.set('trust proxy', 3);
 app.locals.decode = decode;
 app.locals.findError = findError;
-app.locals.formatDate = formatDate;
 
 // set up rate limiter: max of 20 requests per minute
 const { rateLimit } = require('express-rate-limit'); // https://express-rate-limit.mintlify.app/quickstart/usage

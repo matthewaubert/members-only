@@ -104,7 +104,7 @@ To do:
 - [x] Refactor how I confirm message deletion
 - [x] Refactor how I handle protected routes (redirect instead)
 - [x] Make error page more user-friendly
-- [ ] Prep app for deployment
+- [x] Prep app for deployment
   - [x] Create production database
   - [x] Use compression, Helmet, rate limit
   - [x] Set Node version
@@ -113,4 +113,12 @@ To do:
   - [x] Clean up code, remove console.logs
   - [x] Fix express-rate-limiter settings
 - [x] Deploy to production!
-- [ ] Write README
+- [x] Write README
+
+## 3/30/24
+
+- [x] Fix date issue
+- [x] Refactor client-side script for better module efficiency
+- [ ] Fix Safari nav display
+- [ ] Add Webpack and Babel to README
+- [ ] Record video and add to README
