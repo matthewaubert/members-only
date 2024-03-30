@@ -42,9 +42,10 @@
         <%= decode(message.title) %>
       </h4>
       <% if (locals.currentUser?.member) { %>
-      <p class="italic text-gray-400 text-sm">
-        <%= formatDate(message.timestamp) %>
-      </p>
+      <p
+        class="timestamp italic text-gray-400 text-sm"
+        data-date="<%= message.timestamp.toISOString() %>"
+      ></p>
       <% } %>
     </div>
 
