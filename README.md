@@ -23,6 +23,8 @@ A secret messaging board that allows different levels of user interaction based 
    - Enter the top secret passcode to gain your admin privileges. There's no hint for this one. (The answer is at the bottom of this README – use it wisely; with great power comes great responsibility.)
    - Congrats, now you're an admin! Go back to the homepage and delete messages as you see fit.
 
+https://github.com/matthewaubert/members-only/assets/132402803/100eef6b-0a6c-45c6-96fe-4fedb6be1c19
+
 ## Project Objectives
 
 This project was built in order to practice implementing the following skills:
@@ -51,6 +53,7 @@ This project was built in order to practice implementing the following skills:
 - MongoDB, Mongoose
 - Tailwind CSS
 - Git (obviously)
+- Webpack, Babel – for compiling client-side JavaScript
 
 ### Libraries and Middleware
 - [PassportJS](https://www.passportjs.org/) – authentication middleware for Express
@@ -66,6 +69,7 @@ This project was built in order to practice implementing the following skills:
 
 ## Credits
 
+- [Favicon from Freepik - Flaticon](https://www.flaticon.com/free-icon/bubble-chat_6036586?term=secret+message&page=1&position=9&origin=search&related_id=6036586)
 - SVG icons from [Pictogrammers](https://pictogrammers.com/library/mdi/)
 
 ## Top-Secret Passcodes
